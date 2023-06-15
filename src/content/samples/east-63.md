@@ -1,10 +1,10 @@
 ---
-title: Locality Energy (LPE)
-where: Brisbane
-type: Website Copy
-area: Energy Providers
-purpose: Written for an electricity company to help simplfy the complicated legal jargon.
-handle: lpe
+title: East 63
+purpose: Written to help pitch East 63; a high end residential building in Melbourne CBD
+
+where: Melbourne
+type: Advertising Copy
+area: Real Estate
 ---
 
 # Electricity Lingo: The Lowdown
