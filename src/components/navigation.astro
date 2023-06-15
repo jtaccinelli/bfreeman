@@ -20,7 +20,7 @@ const links: Links = [
 });
 ---
 
-<nav class="flex flex-col items-end gap-2">
+<nav class="flex flex-col items-end gap-4">
   {
     links.map((link) => (
       <a
@@ -28,7 +28,7 @@ const links: Links = [
         href={link.href}
         class:list={[
           "relative flex items-center gap-2 transition-all",
-          "after:absolute after:-right-8 after:bottom-0 after:top-0 after:w-0.5 after:transition-all",
+          "after:absolute after:-right-12 after:bottom-0 after:top-0 after:w-0.5 after:transition-all",
           "hover:text-gray-500 hover:after:bg-gray-300",
           "aria-current:font-semibold aria-current:text-main-600 aria-current:after:bg-main-500",
         ]}
