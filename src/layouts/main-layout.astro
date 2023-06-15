@@ -2,7 +2,6 @@
 import "@fontsource-variable/inter";
 import "~/styles/index.css";
 
-import Container from "~/components/container.astro";
 import Header from "~/components/header.astro";
 import Footer from "~/components/footer.astro";
 
@@ -21,11 +20,13 @@ const favicon =
     <title>{title}</title>
     <meta name="description" content={description} />
   </head>
-  <body class="flex min-h-full w-full items-stretch justify-center bg-gray-100">
-    <Container>
+  <body class="h-full flex flex-col items-center justify-stretch bg-gray-100">
+    <div class="h-full w-full max-w-4xl rounded bg-gray-50">
       <Header />
-      <slot />
+      <div class="h-full flex-grow">
+        <slot />
+      </div>
       <Footer />
-    </Container>
+    </div>
   </body>
 </html>
