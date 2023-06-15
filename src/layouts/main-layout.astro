@@ -1,0 +1,27 @@
+---
+import "@fontsource-variable/inter";
+import "~/styles/index.css";
+
+import Container from "~/components/container.astro";
+import Header from "~/components/header.astro";
+import Footer from "~/components/footer.astro";
+
+const { title, description } = Astro.props;
+---
+
+<html lang="en" class="h-full w-full">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <!-- SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="flex min-h-full w-full items-stretch justify-center bg-gray-100">
+    <Container>
+      <Header />
+      <slot />
+      <Footer />
+    </Container>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+---
+import Icon from "astro-icon";
+
+import MainLayout from "~/layouts/main-layout.astro";
+
+import Title from "~/components/title.astro";
+
+import * as lpe from "./samples/lpe.mdx";
+import * as east63 from "./samples/east-63.mdx";
+
+const samples = [
+  lpe.frontmatter,
+  east63.frontmatter,
+  lpe.frontmatter,
+  east63.frontmatter,
+  lpe.frontmatter,
+  east63.frontmatter,
+];
+---
+
+<MainLayout
+  title="Samples | Beth Freeman"
+  description="Some samples of copywriting Beth has collated to represent her flexiblity, tone, and writing style."
+>
+  <main class="grid grid-cols-1 gap-24 px-8 py-12 md:grid-cols-3">
+    <Title>
+      Here's a highlight reel of some of the best copy I've put together
+    </Title>
+    <div class="scrollbar-hide col-span-2 flex gap-4 overflow-x-scroll">
+      {
+        samples.map((sample) => (
+          <a
+            href={sample.handle}
+            class="flex aspect-[5/4] w-72 flex-shrink-0 basis-72 flex-col gap-8 rounded bg-white p-6"
+          >
+            <div class="flex justify-between">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold">{sample.title}</h3>
+                <p>{sample.type}</p>
+              </div>
+              <Icon name="book-open" class="h-6 w-6" />
+            </div>
+            <p>{sample.purpose}</p>
+            <div class="flex flex-row flex-wrap gap-2">
+              <p class="rounded-full border-2 border-gray-200 px-3 py-1 text-sm text-gray-400">
+                {sample.area}
+              </p>
+              <p class="rounded-full border-2 border-gray-200 px-3 py-1 text-sm text-gray-400">
+                {sample.where}
+              </p>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </main>
+</MainLayout>

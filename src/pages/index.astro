@@ -1,15 +1,38 @@
 ---
+import MainLayout from "../layouts/main-layout.astro";
+
+import Button from "~/components/button.astro";
+import Content from "~/components/content.astro";
+import Title from "~/components/title.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout
+  title="Welcome | Beth Freeman"
+  description="Beth Freeman is a copywriter based in Brisbane"
+>
+  <main
+    class="grid flex-grow grid-cols-1 gap-24 px-8 pb-24 pt-12 md:grid-cols-2"
+  >
+    <div class="col-span-1">
+      <Title>
+        <span>Hello!</span>
+        <span>My name's Beth.</span>
+        <span>I write copy.</span>
+      </Title>
+    </div>
+    <div class="col-span-1">
+      <Content>
+        <p>
+          I am based in Brisbane, but I work with companies all over Australia
+          to refine their tone of voice and provide creative and high-quality
+          content with a personal touch.
+        </p>
+        <p>
+          Please feel free to peruse my work and see what strikes your fancy. I
+          look forward to hearing from you!
+        </p>
+        <Button to="/about" class="mt-4">Start Exploring</Button>
+      </Content>
+    </div>
+  </main>
+</MainLayout>

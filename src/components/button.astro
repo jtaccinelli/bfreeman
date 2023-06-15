@@ -1,0 +1,28 @@
+---
+import Icon from "astro-icon";
+
+type Props = {
+  to: string;
+  class?: string;
+  variant?: "light" | "dark";
+};
+
+const { to, class: className, variant = "light" } = Astro.props;
+---
+
+<a
+  href={to}
+  class:list={[
+    "group/button relative flex items-center gap-4 transition-all hover:gap-6",
+    "before:absolute before:-inset-y-3 before:-left-6 before:-right-4 before:rounded-full before:bg-transparent before:transition-all",
+    variant === "light" && "text-black hover:before:bg-white",
+    variant === "dark" && "text-white hover:before:bg-black",
+    className,
+  ]}
+>
+  <span class="relative z-10 font-semibold"><slot /></span>
+  <Icon
+    name="arrow-left-circle"
+    class="relative z-10 h-6 w-6 transition-all group-hover/button:text-main-600"
+  />
+</a>
