@@ -2,20 +2,29 @@
 type Links = {
   title: string;
   href: string;
+  isCurrent: boolean;
 }[];
+
+const pathname = Astro.url.pathname;
 
 const links: Links = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Work", href: "/work" },
   { title: "Samples", href: "/samples" },
-];
+].map((link) => {
+  return {
+    ...link,
+    isCurrent: link.href === pathname,
+  };
+});
 ---
 
 <nav class="flex flex-col items-end gap-2">
   {
     links.map((link) => (
       <a
+        class="nav-link"
         href={link.href}
         class:list={[
           "relative flex items-center gap-2 transition-all",
@@ -23,6 +32,7 @@ const links: Links = [
           "hover:text-gray-500 hover:after:bg-gray-300",
           "aria-current:font-semibold aria-current:text-main-600 aria-current:after:bg-main-500",
         ]}
+        aria-current={link.isCurrent && "page"}
       >
         {link.title}
       </a>
