@@ -7,12 +7,16 @@ import Header from "~/components/header.astro";
 import Footer from "~/components/footer.astro";
 
 const { title, description } = Astro.props;
+
+const favicon =
+  "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✍🏻</text></svg>";
 ---
 
 <html lang="en" class="h-full w-full">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="icon" href={favicon} />
     <!-- SEO -->
     <title>{title}</title>
     <meta name="description" content={description} />
