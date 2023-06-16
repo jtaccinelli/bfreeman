@@ -15,7 +15,7 @@ const { to, class: className, variant = "light" } = Astro.props;
   class:list={[
     "group/button relative flex items-center gap-4 transition-all hover:gap-6",
     "before:absolute before:-inset-y-3 before:-left-6 before:-right-4 before:rounded-full before:bg-transparent before:transition-all",
-    variant === "light" && "text-black hover:before:bg-white",
+    variant === "light" && "text-black hover:before:bg-gray-50",
     variant === "dark" && "text-white hover:before:bg-black",
     className,
   ]}
