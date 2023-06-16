@@ -1,5 +1,6 @@
 ---
-import Button from "~/components/button.astro";
+import Icon from "astro-icon";
+import Button from "./button.astro";
 
 type FAQContent = {
   question: string;
@@ -34,17 +35,25 @@ const faqs: FAQContent = [
 ];
 ---
 
-<section class="grid grid-cols-2 gap-2">
+<section class="grid grid-cols-2 gap-6">
+  <div class="col-span-2 flex items-center gap-4">
+    <h3 class="font-semibold">Rapid Fire Favs</h3>
+    <Icon name="heart" class="h-4 w-4 text-main-600" />
+  </div>
+  <hr class="col-span-2 border-t-2 border-gray-100" />
   {
     faqs.map((item) => (
-      <div class="flex flex-col rounded bg-white p-6">
+      <div class="flex flex-col">
         <p class="font-medium">{item.answer}</p>
         <p class="text-sm text-gray-400">{item.question}</p>
       </div>
     ))
   }
-  <div class="col-span-2 flex justify-between bg-white p-4">
-    <h3 class="">Rapid Fire Favs</h3>
-    <Button to="mailto://beth-freeman@outlook.com">Think I'm wrong?</Button>
-  </div>
+  <hr class="col-span-2 border-t-2 border-gray-100" />
+  <Button
+    class="col-span-1 justify-self-start"
+    to="mailto://beth-freeman@outlook.com"
+  >
+    Think I'm wrong?
+  </Button>
 </section>

@@ -1,4 +1,6 @@
 ---
+import Icon from "astro-icon";
+
 import MainLayout from "~/layouts/main-layout.astro";
 
 import Button from "~/components/button.astro";
@@ -21,7 +23,6 @@ const work = [
   "Social Media",
   "Content Writing",
   "SEO Writing",
-  "And More -",
 ];
 ---
 
@@ -29,34 +30,39 @@ const work = [
   title="Work | Beth Freeman"
   description="A brief summary of Beth's professional history"
 >
-  <main class="grid grid-cols-1 gap-24 px-8 py-12 md:grid-cols-2">
-    <div class="col-span-1 flex flex-col gap-8">
-      <Heading>Professional Summary</Heading>
-      <Content>
-        <p>
-          As you will see, my work experience is wide-ranging - which is just
-          how I like it. I have spent over 5 years developing my portfolio as a
-          freelance writer.
-        </p>
-        <p>
-          I understand the real-world applications behind the marketing
-          strategies that I execute via content. I can jump into an array of
-          industries, apply a variety of communications skills, and rapidly
-          create effective communications strategies, copy and assets with
-          confidence, creativity and flair.
-        </p>
-        <Button to="/samples">See the evidence</Button>
-      </Content>
-    </div>
-    <div class="col-span-1 flex flex-col gap-8">
-      <div class="flex flex-col gap-2">
-        <h3 class="text-gray-400">Areas I've Worked In</h3>
-        {areas.map((area) => <p class="text-xl font-medium">{area}</p>)}
+  <div class="flex flex-col gap-12">
+    <Heading>Professional Overview</Heading>
+    <div class="flex flex-col gap-2">
+      <div class="col-span-2 mb-4 flex items-center gap-4">
+        <h3 class="font-semibold">Where I've Worked</h3>
+        <Icon name="briefcase" class="-mt-1 h-4 w-4 text-main-600" />
       </div>
-      <div class="grid grid-cols-2 gap-2">
-        <h3 class="col-span-2 text-gray-400">What I've Done</h3>
-        {work.map((item) => <p class="font-medium">{item}</p>)}
-      </div>
+      {areas.map((area) => <p class="text-xl">{area}</p>)}
     </div>
-  </main>
+    <div class="grid grid-cols-2 gap-2">
+      <div class="col-span-2 mb-4 flex items-center gap-4">
+        <h3 class="font-semibold">What I've Done</h3>
+        <Icon name="documents" class="h-4 w-4 text-main-600" />
+      </div>
+      {work.map((item) => <p class="font-medium">{item}</p>)}
+      <p class="text-gray-400">And More</p>
+    </div>
+    <hr class="mt-4 w-full border-t-2 border-gray-100" />
+    <Heading>On My Work</Heading>
+    <Content>
+      <p>
+        As you will see, my work experience is wide-ranging - which is just how
+        I like it. I have spent over 5 years developing my portfolio as a
+        freelance writer.
+      </p>
+      <p>
+        I understand the real-world applications behind the marketing strategies
+        that I execute via content. I can jump into an array of industries,
+        apply a variety of communications skills, and rapidly create effective
+        communications strategies, copy and assets with confidence, creativity
+        and flair.
+      </p>
+    </Content>
+    <Button to="/samples" class="self-start">See the evidence</Button>
+  </div>
 </MainLayout>
