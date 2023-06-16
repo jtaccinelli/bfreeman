@@ -3,17 +3,22 @@ import Icon from "astro-icon";
 import Header from "./header.astro";
 ---
 
-<label
-  for="drawer-state"
-  role="button"
-  class:list={[
-    "fixed right-4 top-4",
-    "flex h-12 w-12 items-center justify-center",
-    "rounded-full bg-gray-100 md:hidden",
-  ]}
+<div
+  class="fixed inset-x-0 top-0 flex items-center justify-between p-4 md:hidden"
 >
-  <Icon name="menu" class="h-6 w-6" />
-</label>
+  <p class="pl-4 font-semibold">Beth Freeman</p>
+  <label
+    for="drawer-state"
+    role="button"
+    class:list={[
+      "flex h-12 w-12 items-center justify-center",
+      "rounded-full bg-gray-100 md:hidden",
+    ]}
+  >
+    <Icon name="menu" class="h-6 w-6" />
+  </label>
+</div>
+
 <div class="pointer-events-none fixed inset-0 z-50 flex flex-col md:static">
   <input type="checkbox" id="drawer-state" class="peer hidden" />
   <label

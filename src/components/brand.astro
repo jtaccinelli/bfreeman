@@ -1,0 +1,13 @@
+---
+type Props = {
+  class?: string;
+};
+
+const { class: className } = Astro.props;
+---
+
+<div class:list={["flex flex-col items-end gap-1", className]}>
+  <span aria-label="Writing Emoji" class="mb-4 text-3xl">✍🏻</span>
+  <p class="font-semibold">Beth Freeman</p>
+  <p class="text-gray-400">Freelance Copywriter</p>
+</div>
