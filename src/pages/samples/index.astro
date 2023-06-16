@@ -1,0 +1,55 @@
+---
+import Icon from "astro-icon";
+import { getCollection } from "astro:content";
+
+import MainLayout from "~/layouts/main-layout.astro";
+import Heading from "~/components/heading.astro";
+import Content from "~/components/content.astro";
+import Pill from "~/components/pill.astro";
+
+const samples = await getCollection("samples");
+---
+
+<MainLayout
+  title="Samples"
+  description="Some samples of copywriting Beth has collated to represent her flexiblity, tone, and writing style."
+>
+  <div class="flex flex-col gap-12">
+    <Heading>Work Samples</Heading>
+    <Content>
+      <p>
+        Here's a highlight reel of some of the best copy I've put together. It's
+        a curated selection of the best work I've done over my years as a
+        copywriter
+      </p>
+    </Content>
+    <div class="flex flex-col gap-4">
+      {
+        samples.map((sample) => (
+          <a
+            href={"/samples/" + sample.slug}
+            class="flex flex-col gap-8 rounded bg-gray-50 p-6 transition-all hover:bg-gray-100"
+          >
+            <div class="flex justify-between">
+              <div class="flex flex-col">
+                <h3 class="text-lg font-semibold">{sample.data.title}</h3>
+                <p>{sample.data.type}</p>
+              </div>
+              <Icon name="book-open" class="h-6 w-6 text-main-600" />
+            </div>
+            <p>{sample.data.purpose}</p>
+            <div class="flex flex-row flex-wrap gap-2">
+              <Pill>{sample.data.area}</Pill>
+              <Pill>{sample.data.where}</Pill>
+            </div>
+          </a>
+        ))
+      }
+      <div
+        class="rounded border-2 border-dashed border-gray-200 p-6 text-gray-400"
+      >
+        <p>And more to come...</p>
+      </div>
+    </div>
+  </div>
+</MainLayout>

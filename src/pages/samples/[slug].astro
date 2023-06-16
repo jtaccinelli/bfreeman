@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import Content from "~/components/content.astro";
+import Heading from "~/components/heading.astro";
+import Pill from "~/components/pill.astro";
+import MainLayout from "~/layouts/main-layout.astro";
+
+export async function getStaticPaths() {
+  const samples = await getCollection("samples");
+  return samples.map((sample) => ({
+    params: {
+      slug: sample.slug,
+    },
+    props: {
+      entry: sample,
+    },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content: Markdown } = await entry.render();
+---
+
+<MainLayout title={entry.data.title} description={entry.data.purpose}>
+  <div class="flex flex-col gap-12">
+    <div class="flex gap-2 text-gray-400">
+      <a href="/samples" class="text-black">Samples</a>
+      <span>/</span>
+      <p>{entry.data.title}</p>
+    </div>
+    <Content>
+      <Heading>{entry.data.title}</Heading>
+      <p>
+        {entry.data.purpose}
+      </p>
+    </Content>
+    <hr class="w-full border-t-2 border-gray-100" />
+    <Content>
+      <Markdown class="prose" />
+    </Content>
+    <hr class="w-full border-t-2 border-gray-100" />
+    <div class="flex items-center justify-between gap-2">
+      <p class="font-semibold">Tags</p>
+      <div class="flex items-center gap-2">
+        <Pill>{entry.data.type}</Pill>
+        <Pill>{entry.data.area}</Pill>
+        <Pill>{entry.data.where}</Pill>
+      </div>
+    </div>
+  </div>
+</MainLayout>
