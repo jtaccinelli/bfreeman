@@ -8,7 +8,7 @@ module.exports = {
         current: 'current="page"',
       },
       fontFamily: {
-        sans: "InterVariable, Inter, helvetica, sans-serif",
+        sans: "font, helvetica, sans-serif",
       },
       colors: {
         gray: require("tailwindcss/colors").stone,

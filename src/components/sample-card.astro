@@ -1,0 +1,37 @@
+---
+import Icon from "astro-icon";
+import type { CollectionEntry } from "astro:content";
+
+import Pill from "./pill.astro";
+
+type Props = {
+  sample: CollectionEntry<"samples">;
+  next?: boolean;
+};
+
+const { sample, next } = Astro.props;
+---
+
+<a
+  href={"/samples/" + sample.slug}
+  class="flex flex-col gap-8 rounded bg-gray-50 p-6 transition-all hover:bg-gray-100"
+>
+  <div class="flex justify-between">
+    <div class="flex flex-col">
+      <h3 class="text-lg font-semibold">
+        {next && "Next Up: "}
+        {sample.data.title}
+      </h3>
+      <p>{sample.data.type}</p>
+    </div>
+    <Icon
+      name={next ? "arrow-right-circle" : "book-open"}
+      class="h-6 w-6 text-main-600"
+    />
+  </div>
+  <p>{sample.data.purpose}</p>
+  <div class="flex flex-row flex-wrap gap-2">
+    <Pill>{sample.data.area}</Pill>
+    <Pill>{sample.data.where}</Pill>
+  </div>
+</a>
