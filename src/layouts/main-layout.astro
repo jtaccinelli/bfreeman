@@ -2,8 +2,8 @@
 import "@fontsource-variable/inter";
 import "~/styles/index.css";
 
-import Icon from "astro-icon";
-import Navigation from "~/components/navigation.astro";
+import Drawer from "~/components/drawer.astro";
+import Footer from "~/components/footer.astro";
 
 const { title, description } = Astro.props;
 
@@ -22,50 +22,15 @@ const favicon =
   </head>
   <body class="flex h-full flex-col items-center justify-stretch bg-gray-100">
     <div
-      class:list={[
-        "scrollbar-hide flex h-full w-full max-w-4xl",
-        "flex-col overflow-y-scroll rounded bg-white",
-      ]}
+      class="scrollbar-hide flex h-full w-full max-w-4xl flex-col overflow-y-scroll bg-white"
     >
       <div class="grid flex-grow grid-cols-1 md:grid-cols-3">
-        <div class="flex flex-col md:order-2">
-          <header
-            class:list={[
-              "flex items-end gap-16 flex-grow",
-              "bg-gray-50 px-12 py-24 md:flex-col",
-            ]}
-          >
-            <div class="flex flex-col gap-1 md:items-end">
-              <span aria-label="Writing Emoji" class="mb-4 text-3xl"> ✍🏻</span>
-              <p class="font-medium">Beth Freeman</p>
-              <p class="text-gray-400">Freelance Copywriter</p>
-            </div>
-            <Navigation />
-            <div class="flex flex-col items-end gap-2">
-              <p>Interested?</p>
-              <a
-                href="mailto://beth-freeman@outlook.com"
-                class="group flex items-center gap-4"
-              >
-                <Icon
-                  name="envelope"
-                  class="h-4 w-4 transition-colors group-hover:text-main-600"
-                />
-                <span class="font-semibold">Email Me</span>
-              </a>
-            </div>
-          </header>
-
-          <footer class="flex gap-4 bg-gray-900 px-12 py-6">
-            <p class="hidden text-sm text-gray-500 md:block">
-              Made with <span aria-label="Coffee Emoji">☕️</span> by Jordan Accinelli
-            </p>
-          </footer>
-        </div>
-        <main class="px-12 py-24 md:col-span-2">
+        <main class="px-12 py-32 md:col-span-2">
           <slot />
         </main>
+        <Drawer />
       </div>
+      <Footer />
     </div>
   </body>
 </html>

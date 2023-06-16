@@ -1,0 +1,30 @@
+---
+import Icon from "astro-icon";
+import Navigation from "./navigation.astro";
+---
+
+<header
+  class="flex h-full flex-grow flex-col items-end gap-16 bg-gray-50 px-12 py-24"
+>
+  <div class="flex flex-col items-end gap-1">
+    <span aria-label="Writing Emoji" class="mb-4 text-3xl"> ✍🏻</span>
+    <p class="font-semibold">Beth Freeman</p>
+    <p class="text-gray-400">Freelance Copywriter</p>
+  </div>
+  <Navigation />
+  <div class="flex flex-col items-end gap-2">
+    <p>Interested?</p>
+    <a
+      href="mailto://beth-freeman@outlook.com"
+      class="group flex items-center gap-4"
+    >
+      <Icon
+        name="envelope"
+        class="h-4 w-4 transition-colors group-hover:text-main-600"
+      />
+      <span class="font-semibold">Email Me</span>
+    </a>
+  </div>
+</header>
+
+<script></script>
