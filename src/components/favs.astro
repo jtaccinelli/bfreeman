@@ -1,13 +1,14 @@
 ---
 import Icon from "astro-icon";
 import Button from "./button.astro";
+import SectionHeader from "./section-header.astro";
 
-type FAQContent = {
+type Favs = {
   question: string;
   answer: string;
 }[];
 
-const faqs: FAQContent = [
+const favs: Favs = [
   {
     question: "Favourite Music Genre",
     answer: "Modern Jazz",
@@ -36,13 +37,9 @@ const faqs: FAQContent = [
 ---
 
 <section class="grid grid-cols-2 gap-6">
-  <div class="col-span-2 flex items-center gap-4">
-    <h3 class="font-semibold">Rapid Fire Favs</h3>
-    <Icon name="heart" class="h-4 w-4 text-main-600" />
-  </div>
-  <hr class="col-span-2 border-t-2 border-gray-100" />
+  <SectionHeader text="Rapid Fire Favs" icon="heart" />
   {
-    faqs.map((item) => (
+    favs.map((item) => (
       <div class="flex flex-col">
         <p class="font-medium">{item.answer}</p>
         <p class="text-sm text-gray-400">{item.question}</p>

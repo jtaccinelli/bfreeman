@@ -6,6 +6,7 @@ import MainLayout from "~/layouts/main-layout.astro";
 import Button from "~/components/button.astro";
 import Content from "~/components/content.astro";
 import Heading from "~/components/heading.astro";
+import SectionHeader from "~/components/section-header.astro";
 
 const areas = [
   "Commercial Real Estate",
@@ -33,17 +34,11 @@ const work = [
   <div class="flex flex-col gap-12">
     <Heading>Professional Overview</Heading>
     <div class="flex flex-col gap-2">
-      <div class="col-span-2 mb-4 flex items-center gap-4">
-        <h3 class="font-semibold">Where I've Worked</h3>
-        <Icon name="briefcase" class="-mt-1 h-4 w-4 text-main-600" />
-      </div>
+      <SectionHeader text="Where I've Worked" icon="briefcase" class="mb-4" />
       {areas.map((area) => <p class="text-xl">{area}</p>)}
     </div>
     <div class="grid grid-cols-2 gap-2">
-      <div class="col-span-2 mb-4 flex items-center gap-4">
-        <h3 class="font-semibold">What I've Done</h3>
-        <Icon name="documents" class="h-4 w-4 text-main-600" />
-      </div>
+      <SectionHeader text="What I've Done" icon="documents" class="mb-4" />
       {work.map((item) => <p class="font-medium">{item}</p>)}
       <p class="text-gray-400">And More</p>
     </div>

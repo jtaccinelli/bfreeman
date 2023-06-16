@@ -11,8 +11,8 @@ module.exports = {
         sans: "InterVariable, Inter, helvetica, sans-serif",
       },
       colors: {
-        gray: require("tailwindcss/colors").neutral,
-        main: require("tailwindcss/colors").emerald,
+        gray: require("tailwindcss/colors").stone,
+        main: require("tailwindcss/colors").rose,
       },
     },
   },
