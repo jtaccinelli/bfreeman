@@ -1,6 +1,6 @@
 ---
 import { Icon } from "astro-icon";
-import MainLayout from "../layouts/main-layout.astro";
+import MainLayout from "../../layouts/main-layout.astro";
 
 import ContactForm from "~/components/contact-form.astro";
 import Heading from "~/components/heading.astro";
@@ -36,7 +36,10 @@ const methods: Methods = [
       If you like what you've seen here, you can leave your details in the form
       below, and I'll get back to you as soon as I can.
     </p>
-    <ContactForm />
+    <div class="p-6 rounded bg-gray-50 flex flex-col gap-2">
+      <p class="font-semibold">Your submission was successful!</p>
+      <p>Thanks so much for leaving me your details - I'll be sure to get back to you as soon as I can.</p>
+    </div>
     <hr class="w-full border-t-2 border-gray-100" />
     <p>
       Otherwise, you can use any of the methods listed below to get in touch

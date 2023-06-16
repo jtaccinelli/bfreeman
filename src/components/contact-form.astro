@@ -1,21 +1,9 @@
 <form
   id="contact-form"
+  action="/contact/success"
   class="group flex flex-col items-start gap-4"
   data-netlify="true"
 >
-  <p
-    class="hidden w-full rounded bg-green-200 p-3 text-green-800 group-data-[success=true]:block"
-  >
-    Everything's worked! I'll get back to you as soon as I can.
-  </p>
-  <p
-    class="hidden w-full rounded bg-red-200 p-3 text-red-800 group-data-[error=true]:block"
-  >
-    Something has gone wrong! Please try <a
-      href="mailto:beth-freeman@outlook.com"
-      class="font-medium">emailing</a
-    > instead.
-  </p>
   <div class="flex w-full flex-col gap-2">
     <label for="name" class="font-semibold">Name</label>
     <input
@@ -52,33 +40,3 @@
     Get in touch
   </button>
 </form>
-
-<script>
-  function handleSubmit(event: SubmitEvent) {
-    event.preventDefault();
-
-    const form = event.target as HTMLFormElement;
-    if (!form) return;
-    const data = new FormData(form);
-
-    const options: RequestInit = {
-      method: "post",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: data,
-    };
-
-    fetch("/", options)
-      .then(() => {
-        form.dataset.success = "true";
-      })
-      .catch((error) => {
-        form.dataset.error = "true";
-        console.error(error);
-      });
-  }
-
-  const form = document.querySelector<HTMLFormElement>("#contact-form");
-  form?.addEventListener("submit", handleSubmit);
-</script>
