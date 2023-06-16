@@ -1,0 +1,84 @@
+<form
+  id="contact-form"
+  class="group flex flex-col items-start gap-4"
+  data-netlify="true"
+>
+  <p
+    class="hidden w-full rounded bg-green-200 p-3 text-green-800 group-data-[success=true]:block"
+  >
+    Everything's worked! I'll get back to you as soon as I can.
+  </p>
+  <p
+    class="hidden w-full rounded bg-red-200 p-3 text-red-800 group-data-[error=true]:block"
+  >
+    Something has gone wrong! Please try <a
+      href="mailto:beth-freeman@outlook.com"
+      class="font-medium">emailing</a
+    > instead.
+  </p>
+  <div class="flex w-full flex-col gap-2">
+    <label for="name" class="font-semibold">Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      required
+      class="rounded bg-gray-100 p-2"
+    />
+  </div>
+  <div class="flex w-full flex-col gap-2">
+    <label for="email" class="font-semibold">Email</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+      class="rounded bg-gray-100 p-2"
+    />
+  </div>
+  <div class="flex w-full flex-col gap-2">
+    <label for="message" class="font-semibold">Message</label>
+    <textarea
+      name="message"
+      id="message"
+      rows="4"
+      required
+      class="rounded bg-gray-100 p-2"></textarea>
+  </div>
+  <button
+    type="submit"
+    class="mt-4 rounded bg-main-600 px-4 py-3 font-semibold text-white transition-all hover:bg-main-700"
+  >
+    Get in touch
+  </button>
+</form>
+
+<script>
+  function handleSubmit(event: SubmitEvent) {
+    event.preventDefault();
+
+    const form = event.target as HTMLFormElement;
+    if (!form) return;
+    const data = new FormData(form);
+
+    const options: RequestInit = {
+      method: "post",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: data,
+    };
+
+    fetch("/contact/", options)
+      .then(() => {
+        form.dataset.success = "true";
+      })
+      .catch((error) => {
+        form.dataset.error = "true";
+        console.error(error);
+      });
+  }
+
+  const form = document.querySelector<HTMLFormElement>("#contact-form");
+  form.addEventListener("submit", handleSubmit);
+</script>

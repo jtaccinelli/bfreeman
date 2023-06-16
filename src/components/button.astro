@@ -3,11 +3,12 @@ import Icon from "astro-icon";
 
 type Props = {
   to: string;
+  type?: "submit" | "button";
   class?: string;
   variant?: "light" | "dark";
 };
 
-const { to, class: className, variant = "light" } = Astro.props;
+const { to, class: className, variant = "light", typ } = Astro.props;
 ---
 
 <a

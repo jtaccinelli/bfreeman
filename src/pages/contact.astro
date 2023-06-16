@@ -1,0 +1,24 @@
+---
+import MainLayout from "../layouts/main-layout.astro";
+
+import ContactForm from "~/components/contact-form.astro";
+import Content from "~/components/content.astro";
+import Heading from "~/components/heading.astro";
+---
+
+<MainLayout
+  title="Get In Touch"
+  description="Beth Freeman is a copywriter based in Brisbane"
+>
+  <div class="flex flex-col gap-12">
+    <Content>
+      <Heading>Let's get to know each other.</Heading>
+      <p>
+        If you like what you've seen here, you can either get in touch with me
+        using my email, or by submitting an entry to the form below.
+      </p>
+    </Content>
+    <hr class="w-full border-t-2 border-gray-100" />
+    <ContactForm />
+  </div>
+</MainLayout>
