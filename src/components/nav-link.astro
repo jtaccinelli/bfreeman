@@ -1,0 +1,21 @@
+---
+type Props = {
+  href: string;
+};
+
+const pathname = Astro.url.pathname;
+const { href } = Astro.props;
+---
+
+<a
+  href={href}
+  class:list={[
+    "relative flex items-center font-medium transition-all",
+    "after:absolute after:-right-12 after:bottom-0 after:top-0 after:w-0.5 after:transition-all",
+    "hover:text-gray-500 hover:after:bg-gray-300",
+    "aria-current:text-main-600 aria-current:after:bg-main-500",
+  ]}
+  aria-current={href === pathname && "page"}
+>
+  <slot />
+</a>

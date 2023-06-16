@@ -2,6 +2,7 @@
 import Icon from "astro-icon";
 import Navigation from "./navigation.astro";
 import Brand from "./brand.astro";
+import NavLink from "./nav-link.astro";
 ---
 
 <header
@@ -10,17 +11,8 @@ import Brand from "./brand.astro";
   <Brand />
   <Navigation />
   <div class="flex flex-col items-end gap-2">
-    <p>Interested?</p>
-    <a
-      href="mailto:beth-freeman@outlook.com"
-      class="group flex items-center gap-4"
-    >
-      <Icon
-        name="envelope"
-        class="h-4 w-4 transition-colors group-hover:text-main-600"
-      />
-      <span class="font-medium">Email Me</span>
-    </a>
+    <p class="font-semibold">Interested?</p>
+    <NavLink href="/contact/">Get In Touch</NavLink>
   </div>
 </header>
 
