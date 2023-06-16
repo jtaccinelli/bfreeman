@@ -4,7 +4,12 @@ import Header from "./header.astro";
 ---
 
 <div
-  class="fixed inset-x-0 top-0 flex items-center justify-between p-4 md:hidden"
+  class:list={[
+    "fixed inset-x-0 top-0 z-40",
+    "flex items-center justify-between p-4",
+    "bg-white/70 backdrop-blur",
+    "md:hidden",
+  ]}
 >
   <p class="pl-4 font-semibold">Beth Freeman</p>
   <label
