@@ -25,6 +25,15 @@ const work = [
   "Content Writing",
   "SEO Writing",
 ];
+
+const highlights = [
+  "Published articles on the The Mighty and netting over 10,000 postive responses.",
+  "Partnering with Bonsey Jaden to deliver exceptional copy to clients.",
+  "Working ad lead copywriter for multi million dollar real estate development, East 63.",
+  "Leading accessible communications training for an NDIS provider",
+  "Conquering compliance in medical marketing with Splice",
+  "Helping small businesses find their unique tone of voice.",
+];
 ---
 
 <MainLayout
@@ -36,6 +45,17 @@ const work = [
     <div class="flex flex-col gap-2">
       <SectionHeader text="Where I've Worked" icon="briefcase" class="mb-4" />
       {areas.map((area) => <p class="text-xl">{area}</p>)}
+    </div>
+    <div class="flex flex-col gap-4">
+      <SectionHeader text="Work Highlights" icon="briefcase" class="mb-4" />
+      {
+        highlights.map((highlight, index) => (
+          <div class="flex gap-8">
+            <p class="w-4 shrink-0 text-gray-300">0{index + 1}</p>
+            <p>{highlight}</p>
+          </div>
+        ))
+      }
     </div>
     <div class="grid grid-cols-2 gap-2">
       <SectionHeader text="What I've Done" icon="documents" class="mb-4" />

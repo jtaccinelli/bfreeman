@@ -10,10 +10,10 @@ const { href } = Astro.props;
 <a
   href={href}
   class:list={[
-    "relative flex items-center font-medium transition-all",
+    "relative flex items-center font-medium transition-all text-main-300",
     "after:absolute after:-right-12 after:bottom-0 after:top-0 after:w-0.5 after:transition-all",
-    "hover:text-gray-500 hover:after:bg-gray-300",
-    "aria-current:text-main-600 aria-current:after:bg-main-500",
+    "hover:text-main-700 hover:after:bg-main-700",
+    "aria-current:text-white aria-current:after:bg-white",
   ]}
   aria-current={href === pathname && "page"}
 >

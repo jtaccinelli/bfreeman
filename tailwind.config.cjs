@@ -12,7 +12,7 @@ module.exports = {
       },
       colors: {
         gray: require("tailwindcss/colors").stone,
-        main: require("tailwindcss/colors").rose,
+        main: require("tailwindcss/colors").violet,
       },
     },
   },
