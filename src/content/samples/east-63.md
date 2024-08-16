@@ -15,8 +15,6 @@ East 63 is a high end residential building in Melbourne CBD. Because it is set i
 
 ## Profiles
 
-### Refining the luxury tone of voice.
-
 Because it is set in a luxury precinct and is focused on appealing to either a strategic, asset focused or legacy focused buyer, it makes sense to look to the luxury brands in the east to draw inspiration from and to align East63 with those brands via positive connotation. There are a variety of tones and subsets for luxury brands, these are the ones that are likely to best suit the campaign:
 
 **The storyteller.**
