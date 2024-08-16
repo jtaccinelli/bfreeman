@@ -1,6 +1,6 @@
 ---
 title: Locality Energy (LPE)
-purpose: Written for an electricity company to help simplfy the complicated legal jargon.
+purpose: Handy FAQs written for an electricity company to help simplfy the technical jargon that they're required to use in their communications.
 
 where: Brisbane
 type: Website Copy
@@ -8,12 +8,6 @@ area: Energy Providers
 ---
 
 ## Background
-
-### Tester punch heading
-
-Some blurb about this copy
-
-## Samples
 
 ### Example 1: Simplifying complex language for the everyman via FAQs
 
@@ -37,3 +31,24 @@ So when you install solar, the solar panels produce high voltage direct current 
 **What’s a photovoltaic (PV) panel?**
 
 This is basically just a fancy name for a solar panel! There is plenty of information out there about how solar panels work, but all you really need to know is that PV panels can turn the energy from the sun into electricity, and they are different to thermal solar panels, which are used to produce hot water. They also don’t need direct sunlight to work – you can still get energy from the sun on a cloudy day!
+
+**What’s an embedded network?**
+
+Embedded networks are basically the result of a contract between building owners and an
+electricity supplier, where there is a single meter installed to add up all the energy used by
+everyone in a building such as a block of apartments. Then, sub meters are used to
+measure each individual home’s energy use, so that everyone is paying their fair share. By
+putting all their energy into one big purchasing block, occupants can get a cheaper price
+than if they all bought it separately. It’s basically like bulk buying for electricity! You can learn
+more about embedded networks here.
+
+**What’s the National Electricity Network?**
+
+The National Electricity Network (NEM) is a large transmission network that generates and
+supplies wholesale electricity along the east coast of Australia. It delivers the electricity to
+large industry users and to local suppliers such as LPE. It’s one of the biggest ones in the
+world!
+
+If you run into any jargon you don’t understand, or you have any questions about how to
+interpret your energy bill, then please give us a call. Our mission is to make energy more
+accessible and understandable
