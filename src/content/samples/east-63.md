@@ -13,6 +13,66 @@ area: Real Estate
 
 East 63 is a high end residential building in Melbourne CBD. Because it is set in a luxury precinct and is focused on appealing to either a strategic, asset focused or legacy focused buyer, it makes sense to look to the luxury brands in the east to draw inspiration from and to align East63 with those brands via positive connotation.
 
+## Profiles
+
+### Refining the luxury tone of voice.
+
+Because it is set in a luxury precinct and is focused on appealing to either a strategic, asset focused or legacy focused buyer, it makes sense to look to the luxury brands in the east to draw inspiration from and to align East63 with those brands via positive connotation. There are a variety of tones and subsets for luxury brands, these are the ones that are likely to best suit the campaign:
+
+**The storyteller.**
+
+FIJI Water aims to bring luxury to essentials such as water with long, wandering sentences and a sense of story, wonder and narrative in their marketing.
+
+> On a remote Pacific island, 1,600 miles from the nearest continent, equatorial trade winds purify the clouds that begin FIJI® Water’s journey through one of the world’s last virgin ecosystems.
+
+**The poet.**
+
+This is similar to the storyteller but with more lyrical flair in its luxury brand world, and a focus on
+the senses and emotions of the narrative. A good example of this is Aesop. 
+
+> Our gifts for the home help instil aromatic calm in treasured spaces, marking a departure from the external world into a more soothing private realm.
+
+Utilises quotes from famous and classy people. Aesop uses Shakespeare, East63 could use high profile investors, Melbourne celebrities or architects. 
+
+**The minimalist**
+
+Understated, pared back, no personality, neutral, appeals to a wide audience. 
+
+> East63. Eastern Elegance.
+
+**A couple of examples of these subtypes in use:**
+
+Storyteller:
+> Melbourne has held an iconic position on the world’s cultural stage for 186 years. East Sixty Three is an unrepeatable development opportunity taking its place in the history of architectural elegance in Melbourne. Claim your exclusive stake in grandeur, location and legacy now.
+
+Minimalist:
+> East Sixty Three. Unbeatable eastern elegance.
+
+Or
+
+> East Sixty Three. Your new Melbourne landmark never to be repeated.
+
+<hr class="w-full border-t-2 border-gray-100">
+
+### Subtypes that are unlikely to work well for East Sixty Three
+
+**The Butler**
+
+Asprey is a good example of this. A formal tone is the order of the day for many premium brands, particularly British ones. From British Airways (‘To fly, to serve’) to upmarket heritage brands like Asprey, the Butler is a steady default.
+
+It’s old-fashioned, sure, but a lot of people like that. When buying into old-fashioned luxury, one expects to be addressed accordingly.
+
+- Not modern 
+- Stuffy and dated
+- Doesn’t fit with the design motifs
+
+**The Joker.**
+
+This subtype focuses on jokes, word plays and cleverness to gain appeal. A good example of this is Jaguar, saying “We already know you want one.” Suggested taglines such as “Tall or nothing” and “Not another tall tale” also fit into this subtype. 
+
+This is less likely to appeal to high end buyers and investors, who are looking for class
+and facts. It is difficult to nail this kind of personality without a strong brand behind it, and it is probably best to stick to simple, clear cut or poetic language.
+
 ## Samples
 
 ### Example 1: Brochure Copy
